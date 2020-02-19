@@ -1,6 +1,8 @@
 package forGodel.dao.entity;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -10,6 +12,7 @@ public class Film {
     private Long id;
     private String filmName;
     private Genre genre;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate releaseDate;
     private Director director;
 

@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -42,4 +46,21 @@ public class FilmController {
         request.setAttribute("films", films);
         return "listFilmsById";
     }
+
+    @GetMapping("/filmAfterDate")
+    public String getFilmsAfterDate(HttpServletRequest request){
+        return "filmAfterDate";
+    }
+
+
+    @PostMapping("/filmAfterDate")
+    public String getFilmsAfterSomeDate(HttpServletRequest request){
+        LocalDate date = LocalDate.parse(request.getParameter("date"));
+
+        List<FilmsDTO> films =
+                filmService.getFilmsByReleaseDateIsGreaterThanEqual(date);
+        request.setAttribute("films", films);
+        return "listFilmsAfterDate";
+    }
+
 }
