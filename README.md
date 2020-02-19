@@ -1,7 +1,7 @@
 # godelTest_2020
 project for Godel
 
-Проект сделан с использованием __Spring MVC__, __Spring Data__, __Hibernate__
+Проект сделан с использованием __Maven__, __Spring MVC__, __Spring Data__, __Hibernate__
 Проект __многомодульный__ (dao, service, web)
 
 __Скрипты для базы данных__ находятся в файле ***scriptsForSql.sql***
@@ -12,5 +12,5 @@ __Скрипты для базы данных__ находятся в файле
 __Тесты модуля dao__ test/java/forGodel/TestForCinema.java
 
 
-__Тесты модуля service__ test/java/forGodel/TestForCinema.java
+__Тесты модуля service__ test/java/forGodel/TestForCinema.java   (с использованием mock)
 
