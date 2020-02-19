@@ -30,11 +30,16 @@ public class FilmController {
     }
 
 
-    @PostMapping("/films")
+    @GetMapping("/filmById")
+    public String getFilmsById(HttpServletRequest request){
+        return "filmById";
+    }
+
+    @PostMapping("/filmById")
     public String getFilmsByDirectorId(HttpServletRequest request) {
         Long id = Long.valueOf(request.getParameter("id"));
         List<FilmsDTO> films = filmService.getFilmsByDirector_Id(id);
-        request.setAttribute("film", films);
-        return "films";
+        request.setAttribute("films", films);
+        return "listFilmsById";
     }
 }

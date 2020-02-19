@@ -5,6 +5,7 @@ import forGodel.dao.entity.Genre;
 import java.time.LocalDate;
 
 public class FilmsDTO {
+    private Long directorId;
     private String firstName;
     private String lastName;
     private LocalDate birthDate;
@@ -15,13 +16,23 @@ public class FilmsDTO {
     public FilmsDTO() {
     }
 
-    public FilmsDTO(String firstName, String lastName, LocalDate birthDate, String filmName, LocalDate releaseDate, Genre genre) {
+    public FilmsDTO(Long directorId, String firstName, String lastName,
+                    LocalDate birthDate, String filmName, LocalDate releaseDate, Genre genre) {
+        this.directorId = directorId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
         this.filmName = filmName;
         this.releaseDate = releaseDate;
         this.genre = genre;
+    }
+
+    public Long getDirectorId() {
+        return directorId;
+    }
+
+    public void setDirectorId(Long directorId) {
+        this.directorId = directorId;
     }
 
     public String getFirstName() {
