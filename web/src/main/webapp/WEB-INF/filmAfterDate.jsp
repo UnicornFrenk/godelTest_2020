@@ -8,13 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>After Date</title>
 </head>
 <body>
 
-<p>Введите дату </p>
+<p>Input date</p>
 <form method="post" action="${pageContext.request.contextPath}/filmAfterDate">
-    <p>Выберите дату:
+    <p>Date:
         <input type="date" name="date" value="1901-12-12"
                max="2012-11-11" min="1900-12-12">
         <input type="submit" value="Отправить"></p>

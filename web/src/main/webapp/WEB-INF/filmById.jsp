@@ -6,7 +6,7 @@
 <body>
 <form action="${pageContext.request.contextPath}/filmById" method="post">
 
-    <p>Введите число от 1 до 4:</p>
+    <p>Input Director Id from 1 to 4</p>
     <p><input type="number" name="id" min="1" max="4"
               value="1"></p>
 
@@ -14,7 +14,6 @@
 
 </form>
 
-<a href="${pageContext.request.contextPath}/mainpage">main page</a>
 
 </body>
 </html>

@@ -7,11 +7,15 @@
     <title>Добро пожаловать, JSP!</title>
 </head>
 <body>
-<h1>Добро пожаловать!</h1>
+<h1>Welcome!!</h1>
 
 <a href="${pageContext.request.contextPath}/filmById">Select films by director id</a>
+<br>
+<br>
 <a href="${pageContext.request.contextPath}/filmAfterDate">Select films after
     date</a>
+<br>
+<br>
 <a href="${pageContext.request.contextPath}/filmByIdAndAfterDate">Select films
     by
     director id and after date</a>
