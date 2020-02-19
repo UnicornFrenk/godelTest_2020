@@ -12,7 +12,7 @@
 <a href="${pageContext.request.contextPath}/filmById">Select films by director id</a>
 <a href="${pageContext.request.contextPath}/filmAfterDate">Select films after
     date</a>
-<a href="${pageContext.request.contextPath}/filmByIdAndAfterDAte">Select films
+<a href="${pageContext.request.contextPath}/filmByIdAndAfterDate">Select films
     by
     director id and after date</a>
 

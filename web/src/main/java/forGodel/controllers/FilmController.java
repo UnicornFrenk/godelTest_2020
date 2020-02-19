@@ -63,4 +63,23 @@ public class FilmController {
         return "listFilmsAfterDate";
     }
 
+
+    @GetMapping("/filmByIdAndAfterDate")
+    public String getFilmsByIdAfterDate(HttpServletRequest request){
+        return "filmByIdAndAfterDate";
+    }
+
+
+    @PostMapping("/filmByIdAndAfterDate")
+    public String getFilmsByIdAfterSomeDate(HttpServletRequest request){
+        Long id = Long.valueOf(request.getParameter("id"));
+        LocalDate date = LocalDate.parse(request.getParameter("date"));
+
+        List<FilmsDTO> films =
+                filmService.getFilmsByDirector_IdAndReleaseDateIsGreaterThanEqual(id,date);
+        request.setAttribute("films", films);
+        return "listFilmsByIdAndAfterDate";
+    }
+
+
 }
